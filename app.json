@@ -27,6 +27,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
-  }
+    },
+    "sdkVersion": "43.0.0",
+    "description": "A marketplace for selling the stuff you don't need anymore."
+  },
+  "name": "donewithit"
 }
