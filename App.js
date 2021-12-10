@@ -1,16 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, Image, TouchableHighlight, SafeAreaView } from 'react-native';
 
 export default function App() {
-  let x = 1;
+  const handlePress = () => console.log("Pressed!!!");
   console.log("App executed!");
 
   return (
-    <View style={styles.container}>
-      <Text>Hello Ghidyon! Start Building</Text>
+    <SafeAreaView style={styles.container}>
+      <Text>Hello Ghidyon! Start Building!</Text>
+      <TouchableHighlight activeOpacity={0.1}>
+        <Image
+          source={{
+            uri: "https://picsum.photos/200/300",
+            width: 200,
+            height: 300
+          }} />
+      </TouchableHighlight>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
