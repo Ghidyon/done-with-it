@@ -8,19 +8,13 @@ import {
   Platform
 } from 'react-native';
 import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
+import WelcomeScreen from './app/screens/WelcomeScreen';
 
 export default function App() {
   const { landscape, potrait } = useDeviceOrientation();
-  return (
-    <SafeAreaView style={styles.container}>
-      <View style={{
-        width: '100%',
-        height: landscape ? '100%' : '30%',
-        backgroundColor: "dodgerblue"
-      }}>
 
-      </View>
-    </SafeAreaView >
+  return (
+    <WelcomeScreen></WelcomeScreen>
   );
 }
 
