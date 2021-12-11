@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, Image, TouchableHighlight, SafeAreaView } from 'react-native';
+import { StyleSheet, SafeAreaView, Alert, Button } from 'react-native';
 
 export default function App() {
   const handlePress = () => console.log("Pressed!!!");
@@ -8,16 +8,12 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Hello Ghidyon! Start Building!</Text>
-      <TouchableHighlight activeOpacity={0.1}>
-        <Image
-          source={{
-            uri: "https://picsum.photos/200/300",
-            width: 200,
-            height: 300
-          }} />
-      </TouchableHighlight>
       <StatusBar style="auto" />
+      <Button
+        color="orange"
+        onPress={() => Alert.prompt("Number Prompt", "Enter a number",
+          (string => console.log(string)))}
+        title="Tap me" />
     </SafeAreaView>
   );
 }
